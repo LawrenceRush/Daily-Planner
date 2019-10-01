@@ -1,0 +1,26 @@
+.text-center{
+    text-align: center;
+}
+
+
+.mb {
+    margin-bottom: 30px;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: 130px 130px 130px 130px 130px 130px 130px 130px ;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-items: center;
+
+}
+
+input{
+    width: 100%;
+}
+
+.input-div{
+    width: 100%;
+}
