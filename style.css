@@ -1,3 +1,25 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-image: url("photos/trees.png");
+    margin: 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    color: rgb(6, 197, 245);
+    font-size: 4em;
+}
+
+header{
+    background-color: rgb(223, 111, 6);
+    color: white;
+    border-bottom: 10px solid rgb(223, 75, 6);
+    margin-bottom: 20px;
+}
+
 .text-center{
     text-align: center;
 }
@@ -6,13 +28,23 @@
 
 
 .mb {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
+
+/* #decoration{
+    background-color: rgb(62, 172, 29);
+    width: 90%;
+    height: 10px;
+    
+    margin: 0 auto;
+    margin-bottom: 80px;
+    border-radius: 10px;
+} */
 
 #container{
     display: grid;
     grid-template-columns: 100px auto 100px;
-    grid-template-rows: 130px 130px 130px 130px 130px 130px 130px 130px ;
+    /* grid-template-rows: 130px 130px 130px 130px 130px 130px 130px 130px ; */
     padding-left: 100px;
     padding-right: 100px;
     justify-items: center;
@@ -37,7 +69,7 @@ input{
 .time-div{
     vertical-align: middle;
     line-height: 130px;
-    border-top: solid 1px rgb(212, 209, 209);
+    border-top: solid 3px rgb(168, 167, 167);
     width: 100%;
     text-align: center;
 
