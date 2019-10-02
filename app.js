@@ -3,6 +3,7 @@
  var hour = parseInt(moment().format('HH'))
  var inputsArr = ["", "","", "","", "","", "","", "" ]
  inputsArr = JSON.parse(localStorage.getItem("savedArr"))
+ $("#timer").text(moment().format('MMMM Do YYYY, h:mm:ss a'))
  upDateInputs();
  updateColors();
  
