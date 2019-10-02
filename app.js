@@ -1,7 +1,9 @@
 
 //global vars && setup
  var hour = parseInt(moment().format('HH'))
- 
+ var inputsArr = ["", "","", "","", "","", "","", "" ]
+ inputsArr = JSON.parse(localStorage.getItem("savedArr"))
+ upDateInputs();
  updateColors();
  
  
@@ -25,7 +27,7 @@
     for (var i = 0; i<inputs.length; i++){
      var time = parseInt(inputs[i].getAttribute("time"));
       if  (time == hour){
-          inputs[i].style.backgroundColor = "orange"
+          inputs[i].style.backgroundColor = " rgb(223, 111, 6)"
           
       } else if (time < hour ){
         inputs[i].style.backgroundColor = "red"
@@ -36,10 +38,21 @@
     }
  }
 
+ function upDateInputs(){
+     for(var i =0; i < inputsArr.length; i++){
+         let input = $("#"+i);
+         input.val(inputsArr[i]);
+     }
+ }
+
  //event listners
-//  $( ".fas" ).click(function() {
-//     alert( "Handler for .click() called." );
-//   });
+ $( ".save-div" ).click(function() {
+    var value = ($(this).attr("value"));
+    var textBox = $("#" + value);
+    
+    inputsArr[value] = textBox.val();
+    localStorage.setItem('savedArr', JSON.stringify(inputsArr));
+  });
 
 
 
