@@ -1,8 +1,8 @@
 
 //global vars && setup
  var hour = parseInt(moment().format('HH'))
- var inputsArr = ["", "","", "","", "","", "","", "" ]
- inputsArr = JSON.parse(localStorage.getItem("savedArr"))
+ var inputsArr=[]
+ 
  $("#timer").text(moment().format('MMMM Do YYYY, h:mm:ss a'))
  upDateInputs();
  updateColors();
@@ -46,6 +46,13 @@
      }
  }
 
+ function checkStorage(){
+    inputsArr = JSON.parse(localStorage.getItem("savedArr")) 
+    if (inputsArr == null){ 
+        inputsArr = ["", "","", "","", "","", "","", "" ] 
+    }
+ }
+
  //event listners
  $( ".save-div" ).click(function() {
     var value = ($(this).attr("value"));
@@ -54,6 +61,8 @@
     inputsArr[value] = textBox.val();
     localStorage.setItem('savedArr', JSON.stringify(inputsArr));
   });
+
+
 
 
 
